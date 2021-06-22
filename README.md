@@ -1,4 +1,4 @@
-# ICU_EEG_Final
+# ICU_EEG
 
 This is the final repository for the ICU EEG data reduction project. The repository is organized into the following folders:
 Data: This has the annotation files for all patients we are using in the project. The format is .mat files where each patient has fields that describe seizure start and stop times as well as interictal start and stop times.
