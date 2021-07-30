@@ -1,92 +1,98 @@
-﻿portal_id,annotation_no,sz_presence,diagnosis
-RID0060,1,1,AMS
-RID0061,2,1,SZ
-RID0062,3,1,SZ
-RID0063,4,1,SZ
-RID0064,5,1,SZ
-RID0065,6,1,misc/unknown
-RID0066,7,1,SZ
-RID0067,8,1,SDH
-RID0068,9,1,SDH
-RID0069,10,1,AMS
-RID0072,13,1,SZ
-RID0073,14,1,ICH
-RID0074,15,1,SZ
-RID235_1d807e48,18,1,ICH
-RID244_2aa72934,22,1,Neoplasm
-RID249_9f3b5d22,23,1,SZ
-RID250_ac5b1126,24,1,Neoplasm
-RID251_702ac93f,25,1,ICH
-RID252_68561f5b,26,1,Sepsis/SZ
-RID253_ae81bb9b,27,1,SZ
-RID254_a69203f2,28,1,misc/unknown
-RID256_a80ca08c,30,1,pneumonia/SZ
-RID257_5e2a16b8,31,1,SZ
-RID258_d6280c8b,32,1,misc/unknown
-ICUDataRedux_0003,92,1,Neoplasm
-ICUDataRedux_0004,93,1,Neoplasm
-ICUDataRedux_0006,94,1,misc/unknown
-CNT684,33,2,anoxic
-CNT685,34,2,unspecified coma
-CNT686,35,2,anoxic
-CNT687,36,2,toxometabolic
-CNT688,37,2,toxometabolic
-CNT689,38,2,toxometabolic
-CNT690,39,2,ICH
-CNT691,40,2,SZ
-CNT692,41,2,anoxic
-CNT694,42,2,unspecified coma
-CNT695,43,2,toxometabolic
-CNT698,44,2,AMS
-CNT700,45,2,SZ
-CNT701,46,2,toxometabolic
-CNT702,47,2,ICH
-CNT705,48,2,unspecified coma
-CNT706,49,2,AMS
-CNT708,50,2,ICH
-CNT710,51,2,SZ
-CNT711,52,2,Neoplasm
-CNT713,53,2,unspecified coma
-CNT715,54,2,SZ
-CNT720,57,2,SZ
-CNT723,59,2,toxometabolic
-CNT724,60,2,unspecified coma
-CNT725,61,2,Neoplasm
-CNT726,62,2,unspecified coma
-CNT729,63,2,unspecified coma
-CNT730,64,2,unspecified coma
-CNT731,65,2,ICH
-CNT732,66,2,unspecified coma
-CNT733,67,2,AMS
-CNT734,68,2,AMS
-CNT737,69,2,AMS
-CNT740,70,2,ICH
-CNT741,71,2,ICH
-CNT742,72,2,ICH
-CNT743,73,2,Neoplasm
-CNT748,74,2,anoxic
-CNT750,75,2,ICH
-CNT751,76,2,ICH
-CNT757,77,2,AMS
-CNT758,78,2,toxometabolic
-CNT765,79,2,ICH
-CNT773,80,2,ICH
-CNT774,81,2,toxometabolic
-CNT775,82,2,toxometabolic
-CNT776,83,2,unspecified coma
-CNT778,84,2,ICH
-CNT782,85,2,AMS
-ICUDataRedux_0007,95,3,?
-ICUDataRedux_0008,96,3,?
-ICUDataRedux_0009,97,3,?
-ICUDataRedux_0010,98,3,?
-ICUDataRedux_0011,99,3,?
-ICUDataRedux_0012,100,3,?
-ICUDataRedux_0013,101,3,?
-ICUDataRedux_0014,102,3,?
-ICUDataRedux_0015,103,3,?
-ICUDataRedux_0016,104,3,?
-ICUDataRedux_0017,105,3,?
-ICUDataRedux_0018,106,3,?
-ICUDataRedux_0019,107,3,?
-ICUDataRedux_0020,108,3,?
+﻿portal_id,annotation_no,sz_presence,diagnosis,Age,Sex,Test_set,sz_num,record_length,num_artifact
+RID0060,1,1,AMS,,,0,,,
+RID0061,2,1,SZ,,,0,,,
+RID0062,3,1,SZ,,,0,,,
+RID0063,4,1,SZ,,,0,,,
+RID0064,5,1,SZ,,,0,,,
+RID0065,6,1,misc/unknown,,,0,,,
+RID0066,7,1,SZ,,,0,,,
+RID0067,8,1,SDH,,,0,,,
+RID0068,9,1,SDH,,,0,,,
+RID0069,10,1,AMS,,,0,,,
+RID0072,13,1,SZ,,,0,,,
+RID0073,14,1,ICH,,,0,,,
+RID0074,15,1,SZ,,,0,,,
+RID235_1d807e48,18,1,ICH,,,0,,,
+RID244_2aa72934,22,1,Neoplasm,,,0,,,
+RID249_9f3b5d22,23,1,SZ,,,0,,,
+RID250_ac5b1126,24,1,Neoplasm,,,0,,,
+RID251_702ac93f,25,1,ICH,,,0,,,
+RID252_68561f5b,26,1,Sepsis/SZ,,,0,,,
+RID253_ae81bb9b,27,1,SZ,,,0,,,
+RID254_a69203f2,28,1,misc/unknown,,,0,,,
+RID256_a80ca08c,30,1,pneumonia/SZ,,,0,,,
+RID257_5e2a16b8,31,1,SZ,,,0,,,
+RID258_d6280c8b,32,1,misc/unknown,,,0,,,
+ICUDataRedux_0003,92,1,Neoplasm,,,0,,,
+ICUDataRedux_0004,93,1,Neoplasm,,,0,,,
+ICUDataRedux_0006,94,1,misc/unknown,,,0,,,
+CNT684,33,2,anoxic,31,F,0,,,
+CNT685,34,2,unspecified coma,22,M,0,,,
+CNT686,35,2,anoxic,21,M,0,,,
+CNT687,36,2,toxometabolic,25,F,0,,,
+CNT688,37,2,toxometabolic,74,M,0,,,
+CNT689,38,2,toxometabolic,71,M,0,,,
+CNT690,39,2,ICH,69,M,0,,,
+CNT691,40,2,SZ,84,M,0,,,
+CNT692,41,2,anoxic,24,F,0,,,
+CNT694,42,2,unspecified coma,64,F,0,,,
+CNT695,43,2,toxometabolic,61,M,0,,,
+CNT698,44,2,AMS,60,F,0,,,
+CNT700,45,2,SZ,64,M,0,,,
+CNT701,46,2,toxometabolic,65,M,0,,,
+CNT702,47,2,ICH,67,F,0,,,
+CNT705,48,2,unspecified coma,60,F,0,,,
+CNT706,49,2,AMS,67,F,0,,,
+CNT708,50,2,ICH,63,F,0,,,
+CNT710,51,2,SZ,45,F,0,,,
+CNT711,52,2,Neoplasm,53,F,0,,,
+CNT713,53,2,unspecified coma,75,F,0,,,
+CNT715,54,2,SZ,55,M,0,,,
+CNT720,57,2,SZ,22,F,0,,,
+CNT723,59,2,toxometabolic,22,F,0,,,
+CNT724,60,2,unspecified coma,86,F,0,,,
+CNT725,61,2,Neoplasm,67,M,0,,,
+CNT726,62,2,unspecified coma,19,M,0,,,
+CNT729,63,2,unspecified coma,61,M,0,,,
+CNT730,64,2,unspecified coma,45,M,0,,,
+CNT731,65,2,ICH,75,F,0,,,
+CNT732,66,2,unspecified coma,72,M,0,,,
+CNT733,67,2,AMS,53,F,0,,,
+CNT734,68,2,AMS,52,M,0,,,
+CNT737,69,2,AMS,68,M,0,,,
+CNT740,70,2,ICH,38,F,0,,,
+CNT741,71,2,ICH,60,F,0,,,
+CNT742,72,2,ICH,54,F,0,,,
+CNT743,73,2,Neoplasm,64,F,0,,,
+CNT748,74,2,anoxic,44,F,0,,,
+CNT750,75,2,ICH,53,F,0,,,
+CNT751,76,2,ICH,62,F,0,,,
+CNT757,77,2,AMS,74,M,0,,,
+CNT758,78,2,toxometabolic,20,M,0,,,
+CNT765,79,2,ICH,81,M,0,,,
+CNT773,80,2,ICH,81,F,0,,,
+CNT774,81,2,toxometabolic,44,F,0,,,
+CNT775,82,2,toxometabolic,67,F,0,,,
+CNT776,83,2,unspecified coma,60,M,0,,,
+CNT778,84,2,ICH,66,M,0,,,
+CNT782,85,2,AMS,47,M,0,,,
+CNT929,113,1,,,,1,,,
+ICUDataRedux_0027,116,1,,,F,1,,,
+ICUDataRedux_0028,117,1,,,M,1,,,
+ICUDataRedux_0033,118,1,,,M,1,,,
+ICUDataRedux_0036,119,1,,,F,1,,,
+ICUDataRedux_0040,120,1,,,F,1,,,
+ICUDataRedux_0042,121,1,,,M,1,,,
+ICUDataRedux_0045,122,1,,,M,1,,,
+ICUDataRedux_0049,123,1,,,M,1,,,
+ICUDataRedux_0050,124,1,,,F,1,,,
+ICUDataRedux_0023,125,2,,,F,1,,,
+ICUDataRedux_0026,126,2,,,F,1,,,
+ICUDataRedux_0029,127,2,,,M,1,,,
+ICUDataRedux_0030,128,2,,,M,1,,,
+ICUDataRedux_0034,129,2,,,F,1,,,
+ICUDataRedux_0035,130,2,,,M,1,,,
+ICUDataRedux_0043,131,2,,,F,1,,,
+ICUDataRedux_0044,132,2,,,M,1,,,
+ICUDataRedux_0047,133,2,,,F,1,,,
+ICUDataRedux_0048,134,2,,,M,1,,,
