@@ -30,7 +30,7 @@ pt_type_list = all_pt_info{:,3}; % 1 = discrete sz, 2 = sz free
 %% Set up important variables 
 
 % Set window length
-win_len = 5; % seconds
+win_len = 3; % seconds
 
 % Set up artifact rejection thresholds
 % mean, variance, delta, theta, alpha, beta, LL, enveope, kurtosis, entropy
@@ -44,6 +44,7 @@ classifier_type = 'random_forest';
 % Number of folds
 num_folds = 5;
 
+
 % set up channels
 channels = [3 4 5 9 10 11 12 13 14 16 20 21 23 24 31 32 33 34];
 
@@ -52,7 +53,7 @@ penalty_val = 500;
 
 %% Calculate features
 if run_features
-    for i = 78
+    for i = 1
         % Get patient number
         pt_num = pt_list(i)
         
@@ -102,7 +103,7 @@ if run_features
         fprintf('Finish calculating features\n')
         
         % Save all features
-        save(sprintf('Features/feats_5_sec_%d.mat',pt_num),'features', 'num_removed', 'labels', 'time_windows')
+        save(sprintf('Features/feats_3_sec_%d.mat',pt_num),'features', 'num_removed', 'labels', 'time_windows')
 
     end
 end
@@ -122,7 +123,7 @@ if train_ML
     model_struct = machine_learning_train(sz_list, partition_sz, nsz_list, partition_nsz, penalty_val);
     
     % Save results
-    save('Models/model_struct_5_sec.mat','model_struct','partition_sz','partition_nsz','partition_iic','-v7.3')
+    save('Models/model_struct_3_sec.mat','model_struct','partition_sz','partition_nsz','partition_iic','-v7.3')
     
 end
 
@@ -133,7 +134,7 @@ if test_ML
     [results_struct] = machine_learning_test(model_struct,sz_list, partition_sz, nsz_list, partition_nsz, iic_list, partition_iic);
 
     % Save machine learning test results
-    save('Results/results_struct_5_1.mat','results_struct')
+    save('Results/results_struct_3_4_1.mat','results_struct')
     
 end
 
@@ -144,7 +145,7 @@ if analyze_results
 %     load('Results/results_struct_5_1.mat')
     
     % Analyze all raw results for patients with seizures
-    [TN, AdvRecall, num_sz_true, num_sz_detect, all_Recall, segs_per_hour, segs_num] = compute_metrics(sz_list, 1, results_struct);
+    [TN, AdvRecall, num_sz_true, num_sz_detect, all_Recall, segs_per_hour, segs_num] = compute_metrics(sz_list(), 1, results_struct);
 
     % Analyze all raw results for patients without seizures
     [TN_free, x, y, z, w, segs_per_hour_f, segs_num_f] = compute_metrics(nsz_list, 2, results_struct);
@@ -296,3 +297,11 @@ hold on
 plot(time_windows,Ytest,'rs','MarkerSize',20,'markeredgecolor',color_pallette(3,:),'markerfacecolor',color_pallette(3,:))
 plot(time_windows,Yhat,'rs','MarkerSize',8,'markeredgecolor',color_pallette(4,:),'markerfacecolor',color_pallette(4,:))
 hold off
+
+% Make plots of their seizures & data reduction segments
+
+%% Create data tables
+sz_pts_bad_redux = find(TN(:,10) < 0.8)
+nsz_pts_bad_redux = find(TN_free(:,10) < 0.8)
+sz_pts_bad_recall = find(AdvRecall(:,10) < 0.8)
+%% Save results
