@@ -52,7 +52,7 @@ penalty_val = 500;
 
 %% Calculate features
 if run_features
-    for i = 78
+    for i = 1
         % Get patient number
         pt_num = pt_list(i)
         
