@@ -36,18 +36,18 @@ function [raw_data, raw_times, raw_labels, sample_rate] = pull_data(pt_num, pt_t
 %% 
     % Load annotations
     annot_file = load(sprintf('annot_%d.mat', pt_num));
-    pt_name = eval(['annot_file.annot_' num2str(pt_num) '.patient'])
+    pt_name = annot_file.annot.patient;
     
     % Check if patient type = 1, meaning patient has seizures
     if pt_type == 1
         
         % Get interictal start and stop times
-        ii_start = eval(['annot_file.annot_' num2str(pt_num) '.ii_start']);
-        ii_stop = eval(['annot_file.annot_' num2str(pt_num) '.ii_stop']); 
+        ii_start = annot_file.annot.ii_start;
+        ii_stop = annot_file.annot.ii_stop;
         
         % Get seizure start and stop times
-        sz_start = eval(['annot_file.annot_' num2str(pt_num) '.sz_start']);
-        sz_stop = eval(['annot_file.annot_' num2str(pt_num) '.sz_stop']);
+        sz_start = annot_file.annot.sz_start;
+        sz_stop = annot_file.annot.sz_stop;
         
         % Get number of seizures
         sz_num = length(sz_start); % Get number of seizures
@@ -60,8 +60,8 @@ function [raw_data, raw_times, raw_labels, sample_rate] = pull_data(pt_num, pt_t
     elseif pt_type == 2
         
         % Get interictal start and stop times
-        ii_start = eval(['annot_file.annot_' num2str(pt_num) '.ii_start']);
-        ii_stop = eval(['annot_file.annot_' num2str(pt_num) '.ii_stop']);  
+        ii_start = annot_file.annot.ii_start;
+        ii_stop = annot_file.annot.ii_stop; 
         
         % Find when to start and stop dataset acquisition
         dataset_start = ii_start;
